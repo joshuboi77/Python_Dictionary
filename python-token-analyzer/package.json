@@ -1,0 +1,94 @@
+{
+  "name": "python-token-analyzer",
+  "displayName": "Python Token Analyzer",
+  "description": "Live Python token analysis with definitions from your comprehensive Python dictionary",
+  "version": "0.0.3",
+  "publisher": "local-dev",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Language Packs"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./extension.js",
+  "files": [
+    "extension.js",
+    "built-in-definitions.js",
+    "python-dictionary.js",
+    "README.md"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "python-token-analyzer.showTokenInfo",
+        "title": "Show Token Information"
+      },
+      {
+        "command": "python-token-analyzer.analyzeFile",
+        "title": "Analyze Current File"
+      },
+      {
+        "command": "python-token-analyzer.showDictionary",
+        "title": "Show Python Dictionary"
+      },
+      {
+        "command": "python-token-analyzer.showTokenDefinition",
+        "title": "Show Token Definition"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorLangId == python",
+          "command": "python-token-analyzer.showTokenInfo",
+          "group": "navigation"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "python-token-analyzer.analyzeFile",
+          "when": "view == python-token-analyzer",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "when": "view == python-token-analyzer && viewItem == token",
+          "command": "python-token-analyzer.showTokenDefinition",
+          "group": "inline"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "python-token-analyzer",
+          "name": "Python Token Analysis"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Python Token Analyzer",
+      "properties": {
+        "python-token-analyzer.enableHover": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable hover information for Python tokens"
+        },
+        "python-token-analyzer.showPanel": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the token analysis panel"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "echo 'Extension ready'"
+  }
+}
+
