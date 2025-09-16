@@ -48,24 +48,6 @@ code --install-extension python-token-analyzer-0.0.3.vsix
 3. Check the "Python Token Analysis" panel in the Explorer sidebar
 4. Use `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (macOS) and search "Python Token" for commands
 
-## 🔧 C Token Analyzer
-
-A VS Code extension that provides live C token analysis with definitions from your comprehensive C dictionary.
-
-### Features
-- **Live Hover Information**: Hover over C tokens to see definitions and usage
-- **Visual Token Analysis Panel**: View all tokens organized by type with positions and descriptions
-- **Status Bar Integration**: See current token information in the status bar
-- **Comprehensive Dictionary**: Uses your C reference dictionary for accurate definitions
-- **Real-time Analysis**: Updates as you type
-
-### Installation
-1. Copy the `c-token-analyzer` folder to your VS Code extensions directory:
-   - Windows: `%USERPROFILE%\.vscode\extensions\`
-   - macOS: `~/.vscode/extensions/`
-   - Linux: `~/.vscode/extensions/`
-2. Restart VS Code or reload the window
-3. Open a C file to activate the extension
 
 ## 📁 Project Structure
 
@@ -78,18 +60,8 @@ Language_Token_Analyzers/
 │   ├── python-dictionary.js         # Auto-generated dictionary structure
 │   ├── README.md                    # Python extension documentation
 │   └── python-token-analyzer-0.0.3.vsix  # Packaged extension
-├── Example_Folder/
-│   ├── c-token-analyzer/            # C Token Analyzer Extension
-│   │   ├── extension.js
-│   │   ├── package.json
-│   │   ├── built-in-definitions.js
-│   │   ├── c-dictionary.js
-│   │   └── README.md
-│   ├── C_Dictionary.md              # C language definitions
-│   └── README.md
 ├── Python_Dictionary.md             # Python language definitions
 ├── generate_python_dictionary_js.py # Python dictionary generator
-├── verify_python_dictionary_match.py # Verification script
 └── install_extension.sh             # Installation script for macOS/Linux
 ```
 
@@ -117,18 +89,6 @@ Language_Token_Analyzers/
    code --install-extension python-token-analyzer-0.0.3.vsix
    ```
 
-### C Token Analyzer
-
-1. **Edit extension files:**
-   - `Example_Folder/c-token-analyzer/extension.js`
-   - `Example_Folder/c-token-analyzer/package.json`
-
-2. **Install using shell script:**
-   ```bash
-   cd Example_Folder
-   ./install_extension.sh
-   ```
-
 ## 📋 Requirements
 
 - **VS Code 1.74.0 or higher**
@@ -138,29 +98,17 @@ Language_Token_Analyzers/
 
 ## 🎯 Key Features
 
-### Both Extensions Include:
+### Includes:
 - **Live hover tooltips** with detailed definitions
 - **Interactive token panels** in the Explorer sidebar
 - **Real-time analysis** as you type
 - **Comprehensive dictionaries** with hundreds of token definitions
 - **Command palette integration** for easy access
 - **Status bar integration** showing current token info
-
-### Python Extension Specific:
 - **Working code examples** for every token
 - **Interactive dictionary view** with search functionality
 - **Clickable token squares** with modal dialogs
 - **104 token definitions** covering keywords, builtins, and operators
-
-### C Extension Specific:
-- **650+ token definitions** covering the complete C language
-- **Standard library functions** included
-- **Comprehensive operator coverage**
-
-## 📖 Documentation
-
-- [Python Token Analyzer README](python-token-analyzer/README.md)
-- [C Token Analyzer README](Example_Folder/README.md)
 
 ## 🤝 Contributing
 
@@ -170,6 +118,3 @@ Language_Token_Analyzers/
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
-
-This project is open source and available under the MIT License.
