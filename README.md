@@ -1,7 +1,3 @@
-# Language Token Analyzers
-
-A collection of VS Code extensions that provide live token analysis with comprehensive definitions for programming languages.
-
 ## 🐍 Python Token Analyzer
 
 A VS Code extension that provides live Python token analysis with definitions from your comprehensive Python dictionary.
